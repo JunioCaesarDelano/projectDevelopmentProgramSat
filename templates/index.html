@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.webix.com/edge/webix.css" type="text/css">
+    <script src="//cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+    <title>Development Program SAT</title>
+    <style>
+        .navbar_logo {
+            background-image: url("../static/img/logoAlfamart.svg");
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            background-position: center center;
+            background-size: contain;
+        }
+
+        .navbar_title {
+            font-size: x-large;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" charset="utf-8">
+        webix.ready(function () {
+            webix.ui({
+                view: "scrollview",
+                id: "scrollview",
+                scroll: "y",
+                type: {
+                    width: "auto",
+                    height: "auto"
+                },
+                body: {
+                    rows: [
+                        {
+                            //navbar
+                            view: "toolbar", padding: 5, elements: [
+                                {
+                                    view: "button",
+                                    css: "webix_transparent",
+                                    label: '<div class="navbar_logo"></div>',
+                                    click: home,
+                                    width: 150,
+                                    height: 50
+                                },
+                                {
+                                    view: "label",
+                                    align: "left",
+                                    label: "<div class='navbar_title'><strong>Development Program</strong></div>"
+                                }
+                            ]
+                        },
+                        {
+                            // online status
+                            view: "toolbar",
+                            paddingX: 15,
+                            elements: [
+                                {
+                                    view: "label",
+                                    align: "right",
+                                    margin: 115,
+                                    label: "Selamat Datang, RIFANDI ARIEF <a href='/'>Logout</a>"
+                                }
+                            ]
+                        },
+                        {
+                            view: "dataview",
+                            id: "dataview1",
+                            template: "<div class='webix_strong'>#title#</div>",
+                            // autoheight: true,
+                            scroll: false,
+                            height: 35,
+                            type: {
+                                width: "auto",
+                            },
+                            data: [
+                                { id: 1, title: "<a href=''>Home</a>" },
+                                { id: 2, title: "<a href=''>Intranet</a>" }
+                            ]
+                        },
+                        {
+                            //konten utama
+                            
+                        },
+                        {
+                            // footer
+                            view: "toolbar",
+                            padding: 3,
+                            autoheight: true,
+                            elements: [
+                                {
+                                    view: "label",
+                                    label: "Copyright &copy; 2020 PT. Sumber Alfaria Trijaya, Tbk",
+                                    align: "center"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            });
+
+            function home() {
+                location.href = "/";
+            }
+        });
+    </script>
+</body>
+
+</html>
