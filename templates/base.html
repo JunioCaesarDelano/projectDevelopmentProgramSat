@@ -64,7 +64,14 @@
                                     view: "label",
                                     align: "right",
                                     margin: 115,
-                                    label: "Selamat Datang, RIFANDI ARIEF <a href='/'>Logout</a>"
+                                    label: "<strong>Selamat Datang, RIFANDI ARIEF</strong>"
+                                },
+                                {
+                                    view: "button",
+                                    label: "Logout",
+                                    css: "webix_danger",
+                                    click: home,
+                                    autowidth: true
                                 }
                             ]
                         },
@@ -84,8 +91,7 @@
                             ]
                         },
                         {
-                            //konten utama
-                            
+                            // {% block content %}{% endblock %}
                         },
                         {
                             // footer

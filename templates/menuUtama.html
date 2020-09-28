@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+<script>
+    // {% block content %}
+    rows: [
+        {
+            height: 10
+        },
+        {
+            cols: [
+                {
+                    maxWidth: 400
+                },
+                {
+                    minWidth: 475,
+                    rows: [
+                        {
+                            cols: [
+                                {
+                                    rows: [
+                                        {
+                                            view: "button",
+                                            css: "webix_primary",
+                                            height: 100,
+                                            label: "<h2>Talent Pool</h2>",
+                                            align: "center"
+                                        },
+                                        {
+                                            view: "button",
+                                            height: 300,
+                                            label: "<h3>Informasi mengenai karyawan potensial <br> untuk kebutuhan karir karyawan</h3>",
+                                            align: "center"
+                                        }
+                                    ]
+                                },
+                                {
+                                    rows: [
+                                        {
+                                            view: "button",
+                                            css: "webix_primary",
+                                            height: 100,
+                                            label: "<h2>Development Program</h2>",
+                                            align: "center"
+                                        },
+                                        {
+                                            view: "button",
+                                            height: 300,
+                                            label: "<h3>Informasi mengenai aktivitas <br> peserta development program</h3>",
+                                            align: "center"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    maxWidth: 400
+                }
+            ]
+
+        },
+        {
+
+        }
+    ]
+    // {% endblock %}
+</script>
